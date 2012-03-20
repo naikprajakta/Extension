@@ -13,7 +13,7 @@
 		
 	  	// Called when the user clicks on the browser action.
 	  	chrome.browserAction.onClicked.addListener(function(tab) {
-			chrome.tabs.executeScript(null,{code:"$('.layout').show();"});
+			chrome.tabs.executeScript(null,{code:"$('.layout').slideDown();"});
 			$.getJSON('http://127.0.0.1:5000/tokenize',{
 					   		url:tab.url
 				  			}, function(response) {

@@ -33,6 +33,18 @@ $(':button').click(function(){
 		chrome.extension.sendRequest({"button": "next"});
 	}
 });
+$('.keyword4').click(function(){
+	//alert("in onclick function of keyword4");
+	if($('.popup_keyword4').is(':visible')){
+        	$('.popup_keyword4').slideUp('slow');
+        }else{
+		$('.popup_keyword4').slideDown('slow');	
+	}
+	$('.popup_keyword1').slideUp('slow');
+	$('.popup_keyword2').slideUp('slow');
+	$('.popup_keyword3').slideup('slow');
+	$('.popup_keyword5').slideUp('slow');
+});
 
 $('.keyword1').click(function(){
 	//alert("in onclick function of keyword1");
@@ -76,18 +88,7 @@ $('.keyword3').click(function(){
 	$('.popup_keyword5').slideUp('slow');
 });
 
-$('.keyword4').click(function(){
-	//alert("in onclick function of keyword4");
-	if($('.popup_keyword4').is(':visible')){
-        	$('.popup_keyword4').slideUp('slow');
-        }else{
-		$('.popup_keyword4').slideDown('slow');	
-	}
-	$('.popup_keyword1').slideUp('slow');
-	$('.popup_keyword2').slideUp('slow');
-	$('.popup_keyword3').slideup('slow');
-	$('.popup_keyword5').slideUp('slow');
-});
+
 
 $('.keyword5').click(function(){
 	//alert("in onclick function of keyword4");
