@@ -33,15 +33,84 @@ $(':button').click(function(){
 		chrome.extension.sendRequest({"button": "next"});
 	}
 });
+
 $('.keyword1').click(function(){
 	//alert("in onclick function of keyword1");
-	$('.popup_keyword1').toggle();
+	//check if any popup is currently open,close that by removing the class
+	if($('.popup_keyword1').is(':visible')){
+        	$('.popup_keyword1').slideUp('slow');
+        }else{
+		$('.popup_keyword1').slideDown('slow');	
+	}
+	$('.popup_keyword2').slideUp('slow');
+	$('.popup_keyword3').slideUp('slow');
+	$('.popup_keyword4').slideup('slow');
+	$('.popup_keyword5').slideUp('slow');	
 });
+
 $('.keyword2').click(function(){
 	//alert("in onclick function of keyword2");
-	$('.popup_keyword2').toggle();
+	//$('.popup_keyword2').slideToggle();
+	if($('.popup_keyword2').is(':visible')){
+        	$('.popup_keyword2').slideUp('slow');
+        }else{
+		$('.popup_keyword2').slideDown('slow');	
+	}
+	
+	$('.popup_keyword1').slideUp('slow');
+	$('.popup_keyword3').slideUp('slow');
+	$('.popup_keyword4').slideup('slow');
+	$('.popup_keyword5').slideUp('slow');
+	
 });
+
 $('.keyword3').click(function(){
+	if($('.popup_keyword3').is(':visible')){
+        	$('.popup_keyword3').slideUp('slow');
+        }else{
+		$('.popup_keyword3').slideDown('slow');	
+	}
+	$('.popup_keyword1').slideUp('slow');
+	$('.popup_keyword2').slideUp('slow');
+	$('.popup_keyword4').slideup('slow');
+	$('.popup_keyword5').slideUp('slow');
+});
+
+$('.keyword4').click(function(){
+	//alert("in onclick function of keyword4");
+	if($('.popup_keyword4').is(':visible')){
+        	$('.popup_keyword4').slideUp('slow');
+        }else{
+		$('.popup_keyword4').slideDown('slow');	
+	}
+	$('.popup_keyword1').slideUp('slow');
+	$('.popup_keyword2').slideUp('slow');
+	$('.popup_keyword3').slideup('slow');
+	$('.popup_keyword5').slideUp('slow');
+});
+
+$('.keyword5').click(function(){
+	//alert("in onclick function of keyword4");
+	if($('.popup_keyword5').is(':visible')){
+        	$('.popup_keyword5').slideUp('slow');
+        }else{
+		$('.popup_keyword5').slideDown('slow');	
+	}
+	$('.popup_keyword1').slideUp('slow');
+	$('.popup_keyword2').slideUp('slow');
+	$('.popup_keyword3').slideup('slow');
+	$('.popup_keyword4').slideUp('slow');
+});
+
+$(".close-image").click(function(){
+   $(this).parent().slideUp('slow');
+   $(".popup_keyword1").slideUp('slow');
+   $(".popup_keyword2").slideUp('slow');
+   $(".popup_keyword3").slideUp('slow');
+   $(".popup_keyword4").slideUp('slow');
+   $(".popup_keyword5").slideUp('slow');
+});
+/*$('.keyword3').click(function(){
 	//alert("in onclick function of keyword3");
 	$('.popup_keyword3').toggle();
 });
@@ -53,14 +122,16 @@ $('.keyword4').click(function(){
 $('.keyword5').click(function(){
 	//alert("in onclick function of keyword4");
 	$('.popup_keyword5').toggle();
-});
-$(".close-image").click(function(){
+});*/
+
+/*$(".close-image").click(function(){
    	$(this).parent().hide();
 	$(".popup_keyword1").hide();
    	$(".popup_keyword2").hide();
    	$(".popup_keyword3").hide();
    	$(".popup_keyword4").hide();
 });
+*/
 
 //1)button click 2)call fuction from background.html  sendrequest/onrequest
 
