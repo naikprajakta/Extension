@@ -282,8 +282,15 @@ p#keyword4{
 		background-repeat:repeat-x;
 		overflow:scroll;
 	}
-	#keyword5 .tweet{
+	.tweet{
 		top: 20px;
 		position:absolute;
 		right: 42px;
 }
+
+	.gmap{
+		position:absolute;
+		top: -11px;
+		height: 85px;
+		left: 36px;
+	}
