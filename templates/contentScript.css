@@ -15,6 +15,7 @@
 		width: 43px;
 		background-color: white;
 		height: 26px;
+		cursor:pointer;
 	}
 	#rifunextkeyword{
 		position: absolute;
@@ -23,6 +24,7 @@
 		background-color: white;
 		width: 43px;
 		height: 26px;
+		cursor:pointer;
 	}
 	
 	.layout{
@@ -293,4 +295,14 @@ p#keyword4{
 		top: -11px;
 		height: 85px;
 		left: 36px;
+		cursor:pointer;
+	}
+
+
+
+	.spinner{
+ 		position:absolute;
+		top:38px;
+		height:25px;
+		left:126px;
 	}

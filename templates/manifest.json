@@ -3,7 +3,7 @@
 	  "version": "1.0",
 	  "background_page": "background.html",
 	  "permissions": [
-		"tabs", "http://*/*","file:///*/*"
+		"tabs", "http://*/*","file:///*/*","ajax-loader.gif"
 	  ],
 	  "browser_action":
 	  {
