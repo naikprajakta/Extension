@@ -96,8 +96,8 @@ p#keyword1{
 		border-left: 1px solid gray;
 	}
          .keyword2:hover{
-         background-color:gainsboro;
- }
+	     background-color:gainsboro;
+ 	}
 	p#keyword2{
 		cursor:pointer;
 		color:black;
@@ -111,9 +111,10 @@ p#keyword1{
                 font-variant: small-caps;
                 font-stretch: expanded;
                 font-family: 'Century Gothic',futura,'URW Gothic L',Verdana,sans-serif
-        }
+	        
+	}
 		
-	.keyword3{
+	.keyword3{		
 		position: fixed;
 		top: 550px;
 		left: 485px;
@@ -125,10 +126,12 @@ p#keyword1{
 		border-bottom: 1px solid gray;
 		border-left: 1px solid gray; 
 		font-style:normal;
-	}	
+	}
+	
 	.keyword3:hover{
      		background:gainsboro;
- }
+	 }
+
 	p#keyword3{
 		cursor:pointer;
 		color:Black;
@@ -161,12 +164,14 @@ p#keyword1{
 		font-size: 30px;
 		font-variant: small-caps;
 		font-stretch: expanded;
-		font-family: 'Century Gothic',futura,'URW Gothic L',Verdana,sans-serif;
-		
+		font-family: 'Century Gothic',futura,'URW Gothic L',Verdana,sans-serif;	
 	}
+
 	.keyword4:hover{
-        background:gainsboro;
- }
+	        background:gainsboro;
+	 
+	}
+
 p#keyword4{
 		cursor:pointer;
 		color:black;
@@ -182,6 +187,22 @@ p#keyword4{
                 font-family: 'Century Gothic',futura,'URW Gothic L',Verdana,sans-serif
         }
 	
+	.popup_map{
+		background: whitesmoke;
+		width: 400px;
+		height: 200px;
+		left: 80px;
+		bottom: 90px;
+		position:absolute;
+		text-align:left;
+		border-radius:10px 10px;		
+		border-top: 2px solid gray;
+		border-right: 2px solid gray;
+		border-bottom: 2px solid gray;
+		border-left: 2px solid gray;
+		overflow:scroll;			
+		
+	}
 	.popup_keyword1 {
 		background: whitesmoke;
 		width: 400px;
@@ -276,22 +297,10 @@ p#keyword4{
 	.gmap{
 		position:absolute;
 		top: -11px;
-		height: 85px;
+		height: 75px;
 		left: 36px;
 		cursor:pointer;
 	}
-
-
-/*
-	.spinner{
- 		position:absolute;
-		top:38px;
-		height:25px;
-		left:126px;
-	}
-
-*/
-
 
 .ball1 {
 	background-color: rgba(0,0,0,0);
@@ -327,3 +336,4 @@ p#keyword4{
 	0% { -webkit-transform:rotate(0deg); }
 	100% { -webkit-transform:rotate(-360deg); }
 }
+

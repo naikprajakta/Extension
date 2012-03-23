@@ -6,11 +6,11 @@ document.documentElement.insertBefore(link);
 */
 
 //popup for each keyword click
-$('<div class="popup"><div class="popup_keyword1"></div><div class="popup_keyword2">popup of keyword2</div><div class="popup_keyword3">popup of keyword3</div><div class="popup_keyword4">popup of keyword4</div><div class="popup_keyword5">popup of keyword4</div></div>').appendTo('body');
+$('<div class="popup"><div class="popup_map"></div><div class="popup_keyword1"></div><div class="popup_keyword2">popup of keyword2</div><div class="popup_keyword3">popup of keyword3</div><div class="popup_keyword4">popup of keyword4</div><div class="popup_keyword5">popup of keyword4</div></div>').appendTo('body');
 
 
 //layout of bottom extension
-$('<div class="layout"><img class="close-image" src="http://residentialsearch.savills.co.uk/Content/Images/icon_close.png" /><img class="gmap" src="http://cdn1.iconfinder.com/data/icons/Mobile-Icons/128/04_maps.png" /><div class="ball1"></div><div class="mextension"><div class="keyword1"><p id="keyword1">My extension</p></div><div class="keyword2"><p id="keyword2">video</p></div><div class="keyword3"><p id="keyword3">position</p></div><div class="keyword4"><p id="keyword4">person</p></div><div class="keyword5"><p id="keyword5"></p><img class="twitter" src="http://cdn1.iconfinder.com/data/icons/colorstroked/Twitter.png" /></div><button type="button" id="rifuprevkeyword" style="position: absolute; left: 863px;top: -17px; background-color: white; width: 43px;height: 26px;">Prev</button><button type="button" id="rifunextkeyword" style="position: absolute;left: 863px;top: 25px;background-color: white;width: 43px;height: 26px;">Next</button></div></div>').appendTo('body');
+$('<div class="layout"><img class="close-image" src="http://residentialsearch.savills.co.uk/Content/Images/icon_close.png" /><p class="closetext"style="position:aboslute;top:58px;left:35px;">Close</p><span><img class="gmap" src="http://cdn1.iconfinder.com/data/icons/Mobile-Icons/128/04_maps.png" /><p class="googlemap" style="position:absolute;top:58px;left:35px;">Google Map</p></span><div class="ball1"></div><div class="mextension"><div class="keyword1"><p id="keyword1">My extension</p></div><div class="keyword2"><p id="keyword2">video</p></div><div class="keyword3"><p id="keyword3">position</p></div><div class="keyword4"><p id="keyword4">person</p></div><div class="keyword5"><p id="keyword5"></p><img class="twitter" src="http://cdn1.iconfinder.com/data/icons/colorstroked/Twitter.png" /></div><button type="button" id="rifuprevkeyword" style="position: absolute; left: 863px;top: -17px; background-color: white; width: 43px;height: 26px;">Prev</button><button type="button" id="rifunextkeyword" style="position: absolute;left: 863px;top: 25px;background-color: white;width: 43px;height: 26px;">Next</button></div></div>').appendTo('body');
 
 $('.layout').hide();
 $('.popup_keyword1').hide();
@@ -18,6 +18,9 @@ $('.popup_keyword2').hide();
 $('.popup_keyword3').hide();
 $('.popup_keyword4').hide();
 $('.popup_keyword5').hide();
+$('.popup_map').hide();
+$('p.googlemap').hide();
+$('p.closetext').hide();
 
 $(':button').click(function(){
 	//alert("button click");
@@ -45,6 +48,7 @@ $('.keyword4').click(function(){
 	$('.popup_keyword2').slideUp('slow');
 	$('.popup_keyword3').slideUp('slow');
 	$('.popup_keyword5').slideUp('slow');
+	$('.popup_map').slideUp('slow');
 });
 
 $('.keyword1').click(function(){
@@ -59,6 +63,7 @@ $('.keyword1').click(function(){
 	$('.popup_keyword3').slideUp('slow');
 	$('.popup_keyword4').slideUp('slow');
 	$('.popup_keyword5').slideUp('slow');	
+	$('.popup_map').slideUp('slow');
 });
 
 $('.keyword2').click(function(){
@@ -74,7 +79,7 @@ $('.keyword2').click(function(){
 	$('.popup_keyword3').slideUp('slow');
 	$('.popup_keyword4').slideUp('slow');
 	$('.popup_keyword5').slideUp('slow');
-	
+	$('.popup_map').slideUp('slow');
 });
 
 $('.keyword3').click(function(){
@@ -87,8 +92,22 @@ $('.keyword3').click(function(){
 	$('.popup_keyword2').slideUp('slow');
 	$('.popup_keyword4').slideUp('slow');
 	$('.popup_keyword5').slideUp('slow');
+	$('.popup_map').slideUp('slow');
 });
 
+$('.gmap').click(function(){
+	//alert("in onclick function of keyword4");
+	if($('.popup_map').is(':visible')){
+        	$('.popup_map').slideUp('slow');
+        }else{
+		$('.popup_map').slideDown('slow');	
+	}
+	$('.popup_keyword1').slideUp('slow');
+	$('.popup_keyword2').slideUp('slow');
+	$('.popup_keyword3').slideUp('slow');
+	$('.popup_keyword5').slideUp('slow');
+	$('.popup_keyword4').slideUp('slow');
+});
 
 
 $('.twitter').click(function(){
@@ -116,6 +135,19 @@ $(".close-image").click(function(){
          $(".keyword3").hide('slow');
 	 $(".keyword4").hide('slow');
 });
+
+
+$('.gmap').mouseenter(function(){
+		$('p.googlemap').fadeIn();	
+	});
+$('.gmap').mouseleave(function(){
+		$('p.googlemap').fadeOut();	
+	});
+
+$('.close-image').mousehover(function(){
+		$('p.closetext').fadeIn();	
+	});
+
 /*$('.keyword3').click(function(){
 	//alert("in onclick function of keyword3");
 	$('.popup_keyword3').toggle();
